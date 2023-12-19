@@ -26,10 +26,15 @@ def index():
 @app.route('/img/<filename>')
 def send_img(filename):
     return send_from_directory('./static/img', filename)
+@app.route('/robots.txt')
+def send_robots():
+    return send_from_directory('./static', 'robots.txt')
 
 @app.errorhandler(404)
 def page_not_found(e):
     return redirect(url_for('index'))
+
+
 
 if __name__ == '__main__':
     app.run(debug=True)
