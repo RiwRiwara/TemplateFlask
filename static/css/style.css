@@ -17,15 +17,30 @@
 
   .buy-btn {
     border-radius: 40px;
+    border: 2px solid #A62929;
     background: #FFF;
+    color: #A62929;
     box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.25);
+    transition: background 0.3s ease, color 0.3s ease;
+  }
+  .buy-btn:hover {
+    background: #A62929;
+    color: #FFF;
   }
 
   .buy-btn-2 {
     border-radius: 40px;
     border: 2px solid #A62929;
     background: #FFF;
+    color: #A62929;
+    transition: background 0.3s ease, color 0.3s ease;
   }
+  
+  .buy-btn-2:hover {
+    background: #A62929;
+    color: #FFF;
+  }
+  
 
   .sticky-nav {
     position: fixed;
@@ -42,7 +57,6 @@
   }
 
   .section-second {
-    min-height: 300px;
     background-color: #666666;
     background-image: url('/img/main-bg.webp');
     background-position: center;
@@ -54,21 +68,17 @@
     justify-content: space-between;
   }
 
-  .card-1 {
-    flex: 1 1 calc(33.33% - 10px);
-    margin: 5px;
-    background-color: white;
-    text-align: center;
-    padding: 10px 30px;
-    border-radius: 30px;
-    max-width: 390px;
-    box-shadow: 0px 16px 10px 0px rgba(0, 0, 0, 0.25);
-
+  .top-left {
+    padding: 100px;
   }
 
   @media screen and (max-width: 768px) {
     .card-1 {
       flex: 1 1 calc(50% - 10px);
+    }
+
+    .top-left {
+      padding: 30px;
     }
   }
 
@@ -76,12 +86,122 @@
     .card-1 {
       flex: 1 1 100%;
     }
+
+    .top-left {
+      padding: 30px;
+    }
   }
 
-  .viewerBlock{
+  .viewerBlock {
     border: 1px solid #A62929;
     border-radius: 10px;
     padding: 5px;
     text-align: center;
-    
+
   }
+
+  /* Default styles for card-1 */
+  .card-1 {
+    flex: 1 1 calc(33.33% - 10px);
+    margin: 5px;
+    background-color: white;
+    text-align: center;
+    border-radius: 30px;
+    min-height: 250px;
+    max-width: 350px;
+    box-shadow: 0px 16px 10px 0px rgba(0, 0, 0, 0.25);
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* Styles for slide-up */
+  .card-1 .slide-up {
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    transition: transform 1.5s ease, font-size 1.5s ease;
+    font-size: 45px;
+    font-weight: bold;
+  }
+
+  .card-1:hover .slide-up {
+    transform: translate(-72%, -80%);
+    font-size: 38px;
+    font-weight: bold;
+  }
+
+  /* Styles for card-article */
+  .card-article {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: opacity 1.5s ease, visibility 0s ease, height 1.5s ease;
+    height: 0;
+    overflow: hidden;
+    transition-delay: 0.5s;
+  }
+
+  .card-1:hover .card-article {
+    opacity: 1;
+    visibility: visible;
+    height: auto;
+    transition-delay: 0s;
+  }
+
+  @media (max-width: 768px) {
+    .section-second {
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 50px 25px;
+
+    }
+
+    .card-1 {
+      flex: 1 1 calc(50% - 10px);
+      max-width: 45%;
+      margin: 5px;
+      min-height: 200px;
+
+    }
+
+    .card-1 .slide-up {
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .card-1:hover .slide-up {
+      transform: translate(-50%, -80%);
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    .card-1:hover .card-article {
+      font-size: 12px;
+
+    }
+
+  }
+
+
+  .top-img {
+    transition: transform 1s ease;
+  }
+
+  .top-img:hover {
+    transform: scale(1.1);
+    transition: transform 1s ease;
+  }
+
+  .top-img-bg {
+    background-image: url('/img/top-bg.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
