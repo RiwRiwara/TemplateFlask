@@ -1,69 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="msapplication-TileImage"
+      content="https://meatavatar.com/wp-content/uploads/2023/02/MA-Red-Icon-.png"
+    />
+    <meta name="language" content="English" />
+    <meta name="title" content="Meat Avatar" />
+    <meta
+      name="description"
+      content="Former generation produces and consumes for overpopulation, while the newer generation unlearns overconsumption culture  to shift sustainably"
+    />
+    <meta
+      name="keywords"
+      content="Mear Avatar,Plant-based, Food, Healthy, Food, Life-styles, Healthy Food"
+    />
+    <meta name="robots" content="index, follow" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="author" content="Awirut Phuseansaart" />
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="msapplication-TileImage" content="https://meatavatar.com/wp-content/uploads/2023/02/MA-Red-Icon-.png">
-    <meta name="language" content="English">
-    <meta name="title" content="Meat Avatar">
-    <meta name="description"
-        content="Former generation produces and consumes for overpopulation, while the newer generation unlearns overconsumption culture  to shift sustainably">
-    <meta name="keywords" content="Mear Avatar,Plant-based, Food, Healthy, Food, Life-styles, Healthy Food">
-    <meta name="robots" content="index, follow">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta name="author" content="Awirut Phuseansaart">
+    <meta
+      property="og:image"
+      content="https://meatavatar.com/wp-content/uploads/2023/02/MA-Red-Icon-.png"
+    />
+    <meta property="og:url" content="https://meatavatar.com/" />
+    <meta property="og:site_name" content="Meat Avatar" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:locale:alternate" content="th_TH" />
 
-
-    <meta property="og:image" content="https://meatavatar.com/wp-content/uploads/2023/02/MA-Red-Icon-.png">
-    <meta property="og:url" content="https://meatavatar.com/">
-    <meta property="og:site_name" content="Meat Avatar">
-    <meta property="og:type" content="website">
-    <meta property="og:locale" content="en_US">
-    <meta property="og:locale:alternate" content="th_TH">
-
-    <link rel="icon" href="{{ url_for('static', filename='img/favicon.png') }}" sizes="192x192" alt="Meat Avatar Icon">
-    <link rel="apple-touch-icon" href="https://meatavatar.com/wp-content/uploads/2023/02/MA-Red-Icon-.png"
-        alt="Meat Avatar Icon">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
+    <link
+      rel="icon"
+      href="{{ url_for('static', filename='img/favicon.png') }}"
+      sizes="192x192"
+      alt="Meat Avatar Icon"
+    />
+    <link
+      rel="apple-touch-icon"
+      href="https://meatavatar.com/wp-content/uploads/2023/02/MA-Red-Icon-.png"
+      alt="Meat Avatar Icon"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/base.css') }}"
+    />
 
     <title>Meat Avatar - New way to healthy life.</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="overlay">
-        <div class="loader"></div>
+      <div class="loader"></div>
     </div>
 
-    <header>
-        {% include 'nav.html' %}
-    </header>
+    <header>{% include 'nav.html' %}</header>
     <main class="min-vh-100">
-        {% include 'section-top.html' %}
-        {% include 'section-second.html' %}
-        {% include 'section-third.html' %}
-        {% include 'section-shops.html' %}
+      {% include 'section-top.html' %} {% include 'section-second.html' %} {%
+      include 'section-third.html' %} {% include 'section-shops.html' %}
     </main>
     <footer class="text-center text-lg-start bg-body-tertiary text-muted">
-        {% include 'footer.html' %}
+      {% include 'footer.html' %}
     </footer>
-</body>
-
-<!-- script -->
-
-<script async src="{{ url_for('static', filename='js/script.js') }}"></script>
-<script>
-    window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
-</script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+  </body>
+  <script async src="{{ url_for('static', filename='js/script.js') }}"></script>
+  <script>
+    window.si =
+      window.si ||
+      function () {
+        (window.siq = window.siq || []).push(arguments);
+      };
+  </script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-    crossorigin="anonymous"></script>
-<script defer src="/_vercel/speed-insights/script.js"></script>
-<script defer src="/_vercel/insights/script.js"></script>
-
-
+    crossorigin="anonymous"
+  ></script>
+  <script defer src="/_vercel/speed-insights/script.js"></script>
+  <script defer src="/_vercel/insights/script.js"></script>
 </html>
